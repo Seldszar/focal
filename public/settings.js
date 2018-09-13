@@ -90,6 +90,7 @@ window.settings = {
         types: {
           include: [
             "cheer",
+            "giftPaidUpgrade",
             "raid",
             "resubscription",
             "subscription",
