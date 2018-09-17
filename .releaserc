@@ -2,11 +2,16 @@
   "verifyConditions": [
     "@semantic-release/github"
   ],
-  "prepare": [],
+  "prepare": [
+    {
+      "path": "@semantic-release/exec",
+      "cmd": "node ./scripts/archive.js ${nextRelease.version}"
+    }
+  ],
   "publish": [
     {
       "path": "@semantic-release/github",
-      "assets": "dist/**/*"
+      "assets": "dist/focal-*.zip"
     }
   ]
 }
