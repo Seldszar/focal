@@ -70,14 +70,11 @@ export default {
         });
       })
       .on(this.twitchJs.chatConstants.EVENTS.USER_NOTICE, data => {
-        let type = camelCase(data.event);
-
-        if (type === "giftpaidupgrade") {
-          type = "giftPaidUpgrade";
-        }
-
         this.$store.dispatch("dispatchEvent", {
-          event: { type, data },
+          event: {
+            type: camelCase(data.event),
+            data,
+          },
         });
       });
 

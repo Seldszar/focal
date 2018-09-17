@@ -27,7 +27,7 @@
     "lodash": "^4.17.10",
     "popmotion": "^8.3.3",
     "raven-js": "^3.27.0",
-    "twitch-js": "^2.0.0-beta.14",
+    "twitch-js": "^2.0.0-beta.16",
     "vue": "^2.5.17",
     "vuex": "^3.0.1"
   },
