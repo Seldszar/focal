@@ -16,7 +16,7 @@ import ChatContainer from "../components/ChatContainer.vue";
 import StreamStatus from "../components/StreamStatus.vue";
 
 // eslint-disable-next-line no-control-regex
-const ACTION_PATTERN = /\x01ACTION (.*)\x01/;
+const ACTION_PATTERN = /^\x01ACTION (.*)\x01$/;
 
 export default {
   components: {
