@@ -117,9 +117,6 @@ export default {
 
     commit("UPDATE_CHEERMOTES", { cheermotes });
   },
-  isAuthenticated({ state }) {
-    return state.token !== null;
-  },
   dispatchEvent({ commit, state }, { event, includeTwitchEmotes }) {
     switch (event.type) {
       case "message":

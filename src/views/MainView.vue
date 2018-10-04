@@ -97,16 +97,6 @@ export default {
     clearInterval(this.updateStreamInterval);
     this.twitchJs.chat.disconnect();
   },
-  methods: {
-    handleMessageEvent(message) {
-      this.twitchJs.chat.say(this.$store.state.user.login, message).then(response => {
-        this.$store.dispatch("sendMessage", {
-          userState: response[1],
-          message,
-        });
-      });
-    },
-  },
 };
 </script>
 
