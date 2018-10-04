@@ -15,7 +15,7 @@ export default {
       headers: {
         accept: "application/vnd.twitchtv.v5+json",
         authorization: `Bearer ${state.token}`,
-        "client-id": "drod2dsvd6k66jz6gp2iluam7yofsg",
+        "client-id": process.env.CLIENT_ID,
       },
     }).then(async response => {
       commit("UPDATE_USER", {
@@ -91,7 +91,7 @@ export default {
       headers: {
         accept: "application/vnd.twitchtv.v5+json",
         authorization: `Bearer ${state.token}`,
-        "client-id": "drod2dsvd6k66jz6gp2iluam7yofsg",
+        "client-id": process.env.CLIENT_ID,
       },
     })
       .then(async response => {

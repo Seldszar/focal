@@ -37,6 +37,7 @@ module.exports = {
         "process.env": {
           GIT_COMMIT: JSON.stringify(gitCommit.trim()),
           GIT_VERSION: JSON.stringify(gitVersion.trim()),
+          CLIENT_ID: JSON.stringify(process.env.CLIENT_ID),
           SENTRY_DNS: JSON.stringify(process.env.SENTRY_DNS),
         },
       });
