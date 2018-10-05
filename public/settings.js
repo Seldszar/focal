@@ -2,17 +2,9 @@ window.settings = {
   /**
    * The channel to join.
    *
-   * @type {?String}
-   */
-  channel: "elajjaz",
-
-  /**
-   * The Twitch access token.
-   * Get one here: https://twitchtokengenerator.com/quick/9jr2t2Jsni
-   *
    * @type {String}
    */
-  token: "",
+  channel: "elajjaz",
 
   /**
    * The event colors.

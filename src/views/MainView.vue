@@ -33,8 +33,6 @@ export default {
   },
   created() {
     this.twitchJs = new Twitch({
-      username: this.$store.state.user.login,
-      token: this.$store.state.token,
       clientId: process.env.CLIENT_ID,
     });
 

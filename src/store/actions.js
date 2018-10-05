@@ -7,14 +7,9 @@ const instance = hyperid();
 
 export default {
   async fetchUser({ commit, state }) {
-    const url = `https://api.twitch.tv/helix/users${
-      state.settings.channel ? `?login=${state.settings.channel}` : ""
-    }`;
-
-    await fetch(url, {
+    await fetch(`https://api.twitch.tv/helix/users?login=${state.settings.channel}`, {
       headers: {
         accept: "application/vnd.twitchtv.v5+json",
-        authorization: `Bearer ${state.token}`,
         "client-id": process.env.CLIENT_ID,
       },
     }).then(async response => {
@@ -90,7 +85,6 @@ export default {
     await fetch(`https://api.twitch.tv/kraken/bits/actions?channel_id=${state.user.id}`, {
       headers: {
         accept: "application/vnd.twitchtv.v5+json",
-        authorization: `Bearer ${state.token}`,
         "client-id": process.env.CLIENT_ID,
       },
     })
