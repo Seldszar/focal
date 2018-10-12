@@ -86,11 +86,12 @@ export default {
     this.updateStreamInterval = setInterval(updateStream, 30000);
     updateStream();
 
-    this.twitchJs.chat
-      .connect()
-      .then(() => this.$store.dispatch("fetchEmotes"))
-      .then(() => this.$store.dispatch("fetchCheermotes"))
-      .then(() => this.twitchJs.chat.join(this.$store.state.user.login));
+    this.$store.dispatch("fetchEmotes");
+    this.$store.dispatch("fetchCheermotes");
+
+    this.twitchJs.chat.connect().then(() => {
+      this.twitchJs.chat.join(this.$store.state.user.login);
+    });
   },
   destroyed() {
     clearInterval(this.updateStreamInterval);
