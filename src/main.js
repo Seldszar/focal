@@ -13,11 +13,11 @@ if (process.env.NODE_ENV === "production" && process.env.SENTRY_DNS) {
   Raven.config(process.env.SENTRY_DNS, { release: process.env.GIT_COMMIT })
     .addPlugin(RavenVue, Vue)
     .install();
-}
 
-Raven.setExtraContext({
-  settings: omit(settings, ["token"]),
-});
+  Raven.setExtraContext({
+    settings: omit(settings, ["token"]),
+  });
+}
 
 Raven.context(() => {
   const app = new Vue({
