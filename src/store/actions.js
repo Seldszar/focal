@@ -7,7 +7,7 @@ const instance = hyperid();
 
 export default {
   async fetchUser({ commit, state }) {
-    await fetch(`https://api.twitch.tv/helix/users?login=${state.settings.channel}`, {
+    await fetch(`https://api.twitch.tv/helix/users?login=${state.channel}`, {
       headers: {
         accept: "application/vnd.twitchtv.v5+json",
         "client-id": process.env.CLIENT_ID,

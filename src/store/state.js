@@ -1,9 +1,9 @@
 export default {
   /**
-   * The settings.
-   * @type {Object}
+   * The channel.
+   * @type {String}
    */
-  settings: {},
+  channel: null,
 
   /**
    * The user token.

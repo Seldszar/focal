@@ -3,7 +3,7 @@ import Vue from "vue";
 
 export default {
   UPDATE_SETTINGS(state, { settings }) {
-    state.settings = settings;
+    state.channel = settings.channel;
     state.token = settings.token;
     state.eventColors = settings.eventColors;
     state.columns = settings.columns.map(column => ({
