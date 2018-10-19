@@ -4,6 +4,13 @@
       <div v-bind:class="$style.title">
         {{ title }}
       </div>
+      <div v-bind:class="$style.actions">
+        <button v-on:click="$emit('clear')">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 13h14v-2H5v2zm-2 4h14v-2H3v2zM7 7v2h14V7H7z" />
+          </svg>
+        </button>
+      </div>
     </div>
     <transition-group v-bind:class="$style.lines" ref="lines" tag="div" tabindex="0" v-bind:css="false">
       <div v-bind:class="$style.line" v-for="event in events" v-bind:key="event.id">

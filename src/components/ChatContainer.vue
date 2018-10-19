@@ -2,7 +2,7 @@
   <div v-bind:class="$style.wrapper">
     <div v-bind:class="$style.columns" ref="columns">
       <div v-bind:class="$style.column" ref="column" v-for="(column, index) in columns" v-bind:key="index">
-        <ChatColumn v-bind:title="column.title" v-bind:events="column.events" />
+        <ChatColumn v-bind:title="column.title" v-bind:events="column.events" v-on:clear="clearColumn(index)" />
       </div>
     </div>
   </div>
@@ -35,6 +35,9 @@ export default {
           event.keyCode === 96 ? this.$refs.column.length - 1 : event.keyCode - 97,
         );
       }
+    },
+    clearColumn(index) {
+      this.$store.commit("CLEAR_COLUMN_EVENTS", { index });
     },
     scrollToColumn(columnIndex) {
       const column = this.$refs.column[columnIndex];

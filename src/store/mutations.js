@@ -54,4 +54,11 @@ export default {
       }
     }
   },
+  CLEAR_COLUMN_EVENTS(state, { index }) {
+    const column = state.columns[index];
+
+    if (column) {
+      column.events = [];
+    }
+  },
 };
