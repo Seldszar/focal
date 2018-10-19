@@ -6,7 +6,11 @@ export default {
     state.settings = settings;
     state.token = settings.token;
     state.eventColors = settings.eventColors;
-    state.columns = settings.columns.map(column => ({ ...column, events: [] }));
+    state.columns = settings.columns.map(column => ({
+      capacity: settings.events.capacity,
+      events: [],
+      ...column,
+    }));
   },
   UPDATE_EMOTES(state, { emotes }) {
     state.emotes = emotes;
@@ -18,7 +22,7 @@ export default {
     const column = state.columns[index];
 
     if (column) {
-      if (column.events.length >= state.settings.events.capacity) {
+      if (column.events.length >= column.capacity) {
         column.events.shift();
       }
 
