@@ -1,13 +1,15 @@
 import { isMatch } from "lodash";
 
-function includesMessageTerm(messageTokens, term) {
+function includesMessageTerms(messageTokens, terms) {
   for (const token of messageTokens) {
     if ("emote" in token) {
       continue;
     }
 
-    if (token.text.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
-      return true;
+    for (const term of terms) {
+      if (token.text.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+        return true;
+      }
     }
   }
 
@@ -84,18 +86,14 @@ export function shouldAddEvent(event, channel, filters) {
       }
 
       if ("include" in filters.message) {
-        for (const term of filters.message.include) {
-          if (!includesMessageTerm(event.data.messageTokens, term)) {
-            return false;
-          }
+        if (!includesMessageTerms(event.data.messageTokens, filters.message.include)) {
+          return false;
         }
       }
 
       if ("exclude" in filters.message) {
-        for (const term of filters.message.exclude) {
-          if (includesMessageTerm(event.data.messageTokens, term)) {
-            return false;
-          }
+        if (includesMessageTerms(event.data.messageTokens, filters.message.exclude)) {
+          return false;
         }
       }
     }
