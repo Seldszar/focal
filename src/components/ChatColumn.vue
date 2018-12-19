@@ -200,6 +200,7 @@ export default {
 }
 
 .line {
+  overflow-x: auto;
   margin-bottom: 1px;
 
   &:last-child {
