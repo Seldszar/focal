@@ -3,9 +3,7 @@
     <div v-bind:class="$style.streamStatus">
       <StreamStatus v-bind:stream="stream" v-bind:user="user" />
     </div>
-    <div v-bind:class="$style.chatContainer">
-      <ChatContainer />
-    </div>
+    <div v-bind:class="$style.chatContainer"><ChatContainer /></div>
   </div>
 </template>
 

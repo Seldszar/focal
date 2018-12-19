@@ -1,8 +1,17 @@
 <template>
   <div v-bind:class="$style.wrapper">
     <div v-bind:class="$style.columns" ref="columns">
-      <div v-bind:class="$style.column" ref="column" v-for="(column, index) in columns" v-bind:key="index">
-        <ChatColumn v-bind:title="column.title" v-bind:events="column.events" v-on:clear="clearColumn(index)" />
+      <div
+        v-bind:class="$style.column"
+        ref="column"
+        v-for="(column, index) in columns"
+        v-bind:key="index"
+      >
+        <ChatColumn
+          v-bind:title="column.title"
+          v-bind:events="column.events"
+          v-on:clear="clearColumn(index)"
+        />
       </div>
     </div>
   </div>

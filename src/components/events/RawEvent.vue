@@ -1,7 +1,5 @@
 <template>
-  <div v-bind:class="$style.wrapper">
-    <pre v-bind:class="$style.payload" v-html="event" />
-  </div>
+  <div v-bind:class="$style.wrapper"><pre v-bind:class="$style.payload" v-html="event" /></div>
 </template>
 
 <script>

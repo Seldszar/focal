@@ -1,31 +1,21 @@
 <template>
   <div v-bind:class="$style.wrapper">
-    <div v-bind:class="$style.profileImage">
-      <img v-bind:src="user.profile_image_url" />
-    </div>
+    <div v-bind:class="$style.profileImage"><img v-bind:src="user.profile_image_url" /></div>
     <template v-if="stream">
       <div v-bind:class="$style.streamUptime">
-        <header>
-          Uptime
-        </header>
+        <header>Uptime</header>
         {{ uptime }}
       </div>
       <div v-bind:class="$style.viewerCount">
-        <header>
-          Viewers
-        </header>
+        <header>Viewers</header>
         {{ stream.viewers.toLocaleString() }}
       </div>
       <div v-bind:class="$style.gameName">
-        <header>
-          Game
-        </header>
+        <header>Game</header>
         <Scroller v-bind:content="stream.game" />
       </div>
       <div v-bind:class="$style.streamStatus">
-        <header>
-          Status
-        </header>
+        <header>Status</header>
         <Scroller v-bind:content="stream.channel.status" />
       </div>
     </template>

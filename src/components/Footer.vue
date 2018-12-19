@@ -1,10 +1,12 @@
 <template>
   <div v-bind:class="$style.wrapper">
     <div v-bind:class="$style.spacer">
-      Version &laquo;{{ version }}&raquo; by <a href="https://seldszar.fr" target="_blank">Seldszar</a>
+      Version &laquo;{{ version }}&raquo; by
+      <a href="https://seldszar.fr" target="_blank">Seldszar</a>
     </div>
     <div v-bind:class="$style.support">
-      You like this project? <a href="https://www.paypal.me/seldszar" target="_blank">Please consider donating</a>
+      You like this project?
+      <a href="https://www.paypal.me/seldszar" target="_blank">Please consider donating</a>
     </div>
   </div>
 </template>

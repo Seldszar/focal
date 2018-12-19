@@ -1,13 +1,9 @@
 <template>
   <div v-bind:class="$style.wrapper" v-bind:style="{ borderColor }">
     <div v-bind:class="$style.time">
-      <small>
-        {{ time }}
-      </small>
+      <small> {{ time }} </small>
     </div>
-    <div v-bind:class="$style.event">
-      <component v-bind:event="event" v-bind:is="component" />
-    </div>
+    <div v-bind:class="$style.event"><component v-bind:event="event" v-bind:is="component" /></div>
   </div>
 </template>
 

@@ -3,9 +3,7 @@
     <div v-bind:class="$style.systemMessage">
       {{ event.data.tags.displayName }} just cheered {{ event.data.bits }} bits!
     </div>
-    <div v-bind:class="$style.message">
-      <MessageEvent v-bind:event="event" />
-    </div>
+    <div v-bind:class="$style.message"><MessageEvent v-bind:event="event" /></div>
   </div>
 </template>
 

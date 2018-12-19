@@ -1,8 +1,6 @@
 <template>
   <div v-bind:class="$style.wrapper">
-    <div v-bind:class="$style.systemMessage">
-      {{ event.data.systemMessage }}
-    </div>
+    <div v-bind:class="$style.systemMessage">{{ event.data.systemMessage }}</div>
     <div v-bind:class="$style.message" v-if="event.data.message">
       <MessageEvent v-bind:event="event" />
     </div>

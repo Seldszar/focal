@@ -11,7 +11,11 @@
       </span>
     </div>
     <div v-bind:class="$style.message" v-bind:style="{ color: event.data.isAction && color }">
-      <button v-if="event.isDeleted && !isRestored" v-on:click="isRestored = true" v-bind:class="$style.deletedNotice">
+      <button
+        v-if="event.isDeleted && !isRestored"
+        v-on:click="isRestored = true"
+        v-bind:class="$style.deletedNotice"
+      >
         Message Deleted
       </button>
       <Message v-else v-bind:tokens="event.data.messageTokens" />

@@ -1,11 +1,7 @@
 <template>
   <div v-bind:class="$style.wrapper">
-    <div v-bind:class="$style.emote">
-      <Emote v-bind:name="name" v-bind:url="url" />
-    </div>
-    <div v-bind:class="$style.amount" v-bind:style="{ color }">
-      {{ amount }}
-    </div>
+    <div v-bind:class="$style.emote"><Emote v-bind:name="name" v-bind:url="url" /></div>
+    <div v-bind:class="$style.amount" v-bind:style="{ color }">{{ amount }}</div>
   </div>
 </template>
 

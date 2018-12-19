@@ -1,5 +1,10 @@
 <template>
-  <img v-bind:class="{ [$style.loading]: !isLoaded }" v-bind:src="url" v-bind:title="name" v-on:load="isLoaded = true" />
+  <img
+    v-bind:class="{ [$style.loading]: !isLoaded }"
+    v-bind:src="url"
+    v-bind:title="name"
+    v-on:load="isLoaded = true"
+  />
 </template>
 
 <script>

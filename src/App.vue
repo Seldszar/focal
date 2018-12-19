@@ -1,11 +1,7 @@
 <template>
   <div v-bind:class="$style.wrapper">
-    <div v-bind:class="$style.content">
-      <MainView />
-    </div>
-    <div v-bind:class="$style.footer">
-      <Footer />
-    </div>
+    <div v-bind:class="$style.content"><MainView /></div>
+    <div v-bind:class="$style.footer"><Footer /></div>
   </div>
 </template>
 
