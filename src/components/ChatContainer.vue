@@ -46,7 +46,9 @@ export default {
       }
     },
     clearColumn(index) {
-      this.$store.commit("CLEAR_COLUMN_EVENTS", { index });
+      if (confirm("Do you want to clear the column?")) {
+        this.$store.commit("CLEAR_COLUMN_EVENTS", { index });
+      }
     },
     scrollToColumn(columnIndex) {
       const column = this.$refs.column[columnIndex];
