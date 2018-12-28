@@ -5,7 +5,7 @@ function includesMessageTerms(messageTokens, terms) {
     }
 
     for (const term of terms) {
-      if (token.text.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+      if (token.text.toUpperCase().indexOf(term.toUpperCase()) !== -1) {
         return true;
       }
     }
