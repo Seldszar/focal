@@ -24,6 +24,16 @@ function includesMessageBadges(messageBadges, badges) {
   return false;
 }
 
+function includesUsername(messageUsername, usernames) {
+  for (const username of usernames) {
+    if (messageUsername.toUpperCase() === username.toUpperCase()) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 function isEmoteOnlyMessage(messageTokens) {
   for (const token of messageTokens) {
     if ("mention" in token) {
@@ -81,13 +91,13 @@ export function shouldAddEvent(event, channel, filters) {
 
   if ("from" in filters) {
     if ("include" in filters.from) {
-      if (!filters.from.include.includes(event.data.tags.displayName)) {
+      if (!includesUsername(event.data.username, filters.from.include)) {
         return false;
       }
     }
 
     if ("exclude" in filters.from) {
-      if (filters.from.exclude.includes(event.data.tags.displayName)) {
+      if (includesUsername(event.data.username, filters.from.exclude)) {
         return false;
       }
     }
