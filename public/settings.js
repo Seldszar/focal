@@ -55,7 +55,7 @@ window.settings = {
           include: ["message"],
         },
         from: {
-          exclude: ["WrestlerBot2000", "Nightbot", "Streamelements"],
+          exclude: ["WrestlerBot2000", "Nightbot", "StreamElements"],
         },
         message: {
           onlyEmotes: false,
@@ -69,7 +69,7 @@ window.settings = {
           include: ["message"],
         },
         from: {
-          exclude: ["WrestlerBot2000", "Nightbot", "Streamelements"],
+          exclude: ["WrestlerBot2000", "Nightbot", "StreamElements"],
         },
         message: {
           include: ["elajjaz"],
@@ -95,11 +95,11 @@ window.settings = {
     {
       title: "Moderator Messages",
       filters: {
-        tags: {
-          isModerator: true,
+        badges: {
+          include: ["moderator"],
         },
         from: {
-          exclude: ["WrestlerBot2000", "Nightbot", "Streamelements"],
+          exclude: ["Nightbot", "StreamElements"],
         },
       },
     },
