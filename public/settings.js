@@ -55,10 +55,10 @@ window.settings = {
           include: ["message"],
         },
         from: {
-          exclude: ["WrestlerBot2000", "Nightbot", "StreamElements"],
+          exclude: ["Nightbot", "StreamElements"],
         },
         message: {
-          onlyEmotes: false,
+          emoteOnly: false,
         },
       },
     },
@@ -69,7 +69,7 @@ window.settings = {
           include: ["message"],
         },
         from: {
-          exclude: ["WrestlerBot2000", "Nightbot", "StreamElements"],
+          exclude: ["Nightbot", "StreamElements"],
         },
         message: {
           include: ["elajjaz"],

@@ -105,8 +105,8 @@ export function shouldAddEvent(event, channel, filters) {
 
   if ("messageTokens" in event.data) {
     if ("message" in filters) {
-      if (typeof filters.message.onlyEmotes === "boolean") {
-        if (filters.message.onlyEmotes !== isEmoteOnlyMessage(event.data.messageTokens)) {
+      if (typeof filters.message.emoteOnly === "boolean") {
+        if (filters.message.emoteOnly !== isEmoteOnlyMessage(event.data.messageTokens)) {
           return false;
         }
       }
